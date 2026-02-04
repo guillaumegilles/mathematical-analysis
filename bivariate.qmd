@@ -1,0 +1,220 @@
+---
+title: "Dérivée d’une fonction bivariée & Elasticité partielle"
+---
+
+En économie et marketing. ou en finance, de nombreuses focntions
+dépendent de plusieurs critères, autrement dit,, des **variables**.
+Lorsque ces fonctions reposent sur $2$ variables, on les appellent
+fonctions bivariées.
+
+Mathématiquement, on associe » chaque couple de varaiable $(x, y)$ du
+domaine de définition de $f$, une valeur réelle notée, $f(x, y)$.
+
+## Objectifs
+
+I. Dérivée d’une fonction bivariée :
+
+- Cas simple (sans interaction)
+- Cas complexe (avec interaction)
+
+II. Elasticité d’une fonction bivariée :
+
+- Définition et calcul 
+- Interprétation
+
+---
+
+**Exemple 1** : Les ventes ($V$) d’un produit sont fonction du prix du
+produit ($x$) et des dépenses publicitaires réalisées ($y$) :
+
+$$
+V = f(x,y) = -ax + by
+$$ {#eq-exemple-1}
+
+Avec $a$ et $b$ des constantes réelles positives.
+
+```{python}
+#|echo: false
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.animation import FuncAnimation
+
+# constants
+a = 2
+b = 3 
+
+# varaiables
+x = np.linspace(-10, 10, 50)
+y = np.linspace(-10, 10, 50)
+
+# 2D grid
+X, Y = np.meshgrid(x, y)
+
+# Computation
+V = -a * X + b * Y
+
+# Plot
+fig = plt.figure()
+ax =  fig.add_subplot(projection = "3d")
+
+surf = ax.plot_surface(X, Y, V)
+
+ax.set_axis_off()  # enlève les axes (meilleure intégration web)
+
+# Remove padding around pot
+plt.tight_layout(pad=0)
+fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
+
+# Create a rotation animation
+def update(frame):
+    ax.view_init(elev=30, azim=frame)
+    return surf
+
+ani = FuncAnimation(
+    fig,
+    update,
+    frames=np.linspace(0, 360, 120),
+    interval=50
+)
+
+plt.show()
+```
+
+**Exemple 2** : Le profit total $\pi$ d’une entreprise dépend de la
+quantité produite ($x$) du bien #1 et de la quantité produite ($y$)
+de biens #2 :
+
+$$
+\pi = f(x, y) = 50x - 10x^2 + 40y - 5y^2
+$$
+
+```{python}
+#|echo: false
+import matplotlib.pyplot as plt
+import numpy as np
+
+from matplotlib import cm
+
+
+# Make data
+X = np.arange(-5, 5, 0.25)
+Y = np.arange(-5, 5, 0.25)
+X, Y = np.meshgrid(X, Y)
+R = np.sqrt(X**2 + Y**2)
+Z = np.sin(R)
+
+# Plot the surface
+fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
+ax.plot_surface(X, Y, Z, vmin=Z.min() * 2, cmap=cm.Blues)
+
+ax.set(xticklabels=[],
+       yticklabels=[],
+       zticklabels=[])
+
+plt.show()
+```
+
+
+## Dérivée Partielle
+
+### Dérivée partielle par rapport à $x$
+
+On appelle **dérivée partielle de $f$ par rapport à $x$ au point $(x, y)$** :
+
+$$
+f\prime_x(x,y) = \lim_{h \to 0} \frac{f(x + h, y) - f(x,y)}{h}
+$$
+
+En pratique, la dérivée partielle par rapport à $x$ consiste à dériver
+par rapport à $x$ tout en gardant $y$ constant.
+
+### Dérivée partielle par rapport à $y$
+
+On appelle **dérivée partielle de $f$ par rapport à $y$ au point $(x, y)$** :
+
+$$
+f\prime_y(x,y) = \lim_{h \to 0} \frac{f(x, y + h) - f(x,y)}{h}
+$$
+
+En pratique, la dérivée partielle par rapport à $y$ consiste à dériver
+par rapport à $y$ tout en gardant $x$ constant.
+
+>>>>>>>>> GRAPHIQUE
+
+En reprenant l’@eq-exemple-1, $f(x, y)$ peut s’écrire $f_1(x) + f_2(y)$ =>
+**pas d’interaction entre $x$ et $y$**.
+
+$$
+\begin{aligned}
+  f\prime_x(x,y) & = \lim_{h \to 0} \frac{f(x + h, y) - f(x,y)}{h} \\
+                 & = \lim_{h \to 0} \frac{-a(x + h) + by - (-ax + by)}{h} \\
+                 & = \lim_{h \to 0} \frac{-ah}{h} \\
+                 & = {\color{red} -a}
+\end{aligned}
+
+\begin{aligned}
+  f\prime_y(x,y) & = \lim_{h \to 0} \frac{f(x, y + h) - f(x,y)}{h} \\
+                 & = \lim_{h \to 0} \frac{-ax + b(y + h) - (-ax + by)}{h} \\
+                 & = \lim_{h \to 0} \frac{bh}{h} \\
+                 & = {\color{red} b}
+\end{aligned}
+$$
+
+::: {.callout-important}
+Dans le cas de focntions sans interactions, $f\prime_x(x,y) = f\prime_1(x)$ et $f\prime_y(x,y) = f\prime_2(y)$
+:::
+
+Dérivées secondes d’une fonction bivariée 
+- 
+- (2 heures)
+
+- Dérivées secondes d’une fonction bivariée
+- 
+- 
+- Les règles de calculs des dérivées secondes sont les mêmes que celles s’appliquant aux dérivées faites précédemment (cf. Module1).
+
+- Elasticités partielles
+- 
+- (2 heures)
+
+- Exemple : 
+- La demande pour un bien dépend du prix p et du revenu R. 
+- 
+- Pour un revenu constant R = 100, un consommateur observe : 
+- Si p = 20 euros et augmente de 1%, la demande diminue de 0,19 %
+- Si p = 50 euros et augmente de 1%, la demande diminue de 0,68 %
+- Si p = 80 euros et augmente de 1%, la demande diminue de 1,78 %
+- 
+- L’élasticité de la demande par rapport au prix n’est pas constante : plus le prix est élevé, plus la demande diminue suite à une augmentation du prix.
+
+- 47
+
+- Pour un revenu constant R = 1000, le consommateur observe : 
+- Si p = 20 euros et augmente de 1%, la demande diminue de 0,061 %
+- Si p = 50 euros et augmente de 1%, la demande diminue de 0,167 %
+- Si p = 80 euros et augmente de 1%, la demande diminue de 0,296 %
+- 
+- Autrement dit, pour un revenu plus élevé, l’élasticité de la demande par rapport au prix est plus faible  lorsque le revenu augmente, la demande est moins sensible aux variations de prix
+
+- 4. Interprétation : 
+- 
+- Elasticité-prix de la demande : 
+- - toujours négative (pour un niveau de revenu fixé, lorsque le prix augmente, la demande diminue)
+- 
+- - est faible : demande faiblement sensible au prix  bien de première nécessité (alimentation, transport, énergie…)
+- 
+- - augmente (en valeurs absolues) quand le prix augmente à revenu constant (quand le prix est élevé, la demande devient plus sensible aux variations de prix)
+- 
+- - baisse (en valeurs absolues) quand le revenu augmente (à revenu élevé, le consommateur est moins sensible aux variations de prix).
+
+- 55
+
+- Elasticité-revenu de la demande : 
+- - toujours positive (pour un prix fixé, lorsque le revenu augmente, la demande augmente)
+- 
+- - est faible : demande faiblement sensible au revenu  bien de première nécessité (alimentation, transport, énergie…)
+- 
+- - augmente quand le revenu augmente (quand le revenu est élevé, les ménages ont plus de marge pour leur consommation)
+- 
+- - augmente quand le prix augmente (quand le prix augmente, le bien devient coûteux pour le consommateur. Une augmentation du revenu aura donc un impact important sur la demande car cela facilitera l’achat du bien).
+

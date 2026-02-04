@@ -1,20 +1,30 @@
 project:
   type: book
-  output-dir: docs
+  output-dir: ../../docs/mathematical-analysis
 
 book:
   title: "Mathematical Analysis"
   author: "Guillaume Gilles"
   date: "1/27/2026"
+  search: 
+    location: sidebar
+  navbar:
+    right:
+      - href: ../about/index.html
+        text: "About"
+      - href: ../index.html
+        text: "Projects"
+ 
   chapters:
     - index.qmd
-    - intro.qmd
-    - summary.qmd
+    - derivatives.qmd
+    - bivariate.qmd
     - references.qmd
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: light.scss
 

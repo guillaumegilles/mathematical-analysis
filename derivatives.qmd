@@ -1,10 +1,25 @@
-
 ---
-title: "Module 1 : Dérivée d’une fonction univariée & Elasticité"
+title: "Dérivée d’une fonction univariée & Elasticité"
 ---
 
-# Introduction
 
+:::: {.panel-tabset}
+
+### English 
+
+::: {.callout-note}
+### Objectives
+
+- Understand derivatives
+
+:::
+
+### Français
+
+
+
+
+::::
 ## Objectifs du module
 - Comprendre la **dérivée d’une fonction univariée**
 - Savoir **calculer et interpréter** une dérivée
