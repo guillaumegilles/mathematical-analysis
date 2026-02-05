@@ -1,4 +1,131 @@
 ---
+title: "Module 1 – Dérivée d’une fonction univariée et Élasticité"
+lang: fr
+---
+
+# Introduction
+
+Ce module présente les notions fondamentales de dérivation des fonctions univariées et leur interprétation économique à travers la notion d’élasticité.
+
+# Partie 1 – Dérivée d’une fonction univariée (cas simple)
+
+## Définition
+
+Une fonction $f$ est dite dérivable en $x$ si le taux d’accroissement
+$$
+\frac{f(x+h)-f(x)}{h}
+$$
+admet une limite quand $h \to 0$.  
+On définit alors :
+$$
+f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
+$$
+
+## Exemples
+
+### Exemple 1
+$f(x)=x^2$  
+$$
+f'(x)=2x
+$$
+
+### Exemple 2
+$f(x)=\frac{1}{x}$  
+$$
+f'(x)=-\frac{1}{x^2}
+$$
+
+### Exemple 3
+$f(x)=\sqrt{x}$  
+$$
+f'(x)=\frac{1}{2\sqrt{x}}, \quad x>0
+$$
+
+## Dérivées usuelles
+
+| Fonction $f(x)$ | Dérivée $f'(x)$ | Condition |
+|---|---|---|
+| $k$ | $0$ | $k \in \mathbb{R}$ |
+| $kx$ | $k$ | |
+| $x^n$ | $nx^{n-1}$ | $n\in\mathbb{N}$ |
+| $e^x$ | $e^x$ | |
+| $\ln(x)$ | $\frac{1}{x}$ | $x>0$ |
+
+## Exercices (avec corrigés)
+
+Des exercices de calcul de dérivées sont proposés avec correction détaillée afin de consolider les acquis.
+
+# Partie 2 – Dérivée d’une fonction composée
+
+## Règles de dérivation
+
+- $(u+v)' = u' + v'$
+- $(uv)' = u'v + uv'$
+- $\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}$
+- $(e^{u(x)})' = u'(x)e^{u(x)}$
+- $(\ln u(x))' = \frac{u'(x)}{u(x)}$
+
+## Exemples et exercices corrigés
+
+Applications directes sur des fonctions polynomiales, rationnelles, logarithmiques et exponentielles.
+
+# Partie 3 – Interprétation de la dérivée
+
+## Interprétation géométrique
+
+La dérivée $f'(a)$ représente la pente de la tangente à la courbe de $f$ au point d’abscisse $a$.
+
+## Sens de variation
+
+- $f'(x)>0$ : fonction croissante
+- $f'(x)<0$ : fonction décroissante
+
+Plusieurs études complètes de variations sont présentées avec graphiques.
+
+# Partie 4 – Élasticité
+
+## Définition
+
+L’élasticité de $f$ par rapport à $x$ est définie par :
+$$
+E(x) = f'(x) \times \frac{x}{f(x)}
+$$
+
+## Interprétation économique
+
+- $E(x)=0$ : parfaitement inélastique
+- $0<|E(x)|<1$ : inélastique
+- $|E(x)|=1$ : élasticité unitaire
+- $|E(x)|>1$ : élastique
+
+## Applications
+
+Étude de fonctions de demande et interprétation économique selon le niveau des prix.
+
+# Conclusion
+
+Ce module pose les bases essentielles de l’analyse mathématique appliquée à l’économie, en reliant rigueur mathématique et interprétation économique.
+
+
+<<<<<<<<>>>>>>>>>>>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 title: "Dérivée d’une fonction univariée & Elasticité"
 ---
 
