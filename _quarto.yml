@@ -17,8 +17,17 @@ book:
  
   chapters:
     - index.qmd
+    # Chapter 1
     - derivatives.qmd
+    # Chapter 2
+    
+    # Chapter 3
     - bivariate.qmd
+    # Chapter 4
+    - matrices.qmd
+    # Chapter 5
+    - operations-research.qmd
+    #
     - references.qmd
 
 bibliography: references.bib
