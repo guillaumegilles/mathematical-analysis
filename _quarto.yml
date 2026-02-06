@@ -20,7 +20,7 @@ book:
     # Chapter 1
     - derivatives.qmd
     # Chapter 2
-    
+    - intro-math-optimization.qmd
     # Chapter 3
     - bivariate.qmd
     # Chapter 4
