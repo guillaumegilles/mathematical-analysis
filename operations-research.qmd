@@ -1,7 +1,6 @@
 ---
 title: "Module 5 – Introduction à la recherche opérationnelle"
-lang: fr
---------
+---
 
 # Introduction à la recherche opérationnelle
 

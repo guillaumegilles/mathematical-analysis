@@ -10,10 +10,8 @@ book:
     location: sidebar
   navbar:
     right:
-      - href: ../about/index.html
-        text: "About"
-      - href: ../index.html
-        text: "Projects"
+      - href: ../about/README.html
+      - href: ../blog.html
  
   chapters:
     - index.qmd

@@ -1,7 +1,6 @@
 ---
 title: "Module 4 – Optimisation d’une fonction bivariée"
-lang: fr
---------
+---
 
 # Introduction
 
