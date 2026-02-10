@@ -17,17 +17,23 @@ book:
  
   chapters:
     - index.qmd
-    # Chapter 1
-    - derivatives.qmd
-    # Chapter 2
-    - intro-math-optimization.qmd
-    # Chapter 3
-    - bivariate.qmd
-    # Chapter 4
-    - matrices.qmd
-    # Chapter 5
-    - operations-research.qmd
-    #
+    - part: "UNIVARIATE"
+      chapters:
+      # Chapter 1
+      - derivatives.qmd
+      # Chapter 2
+      - intro-math-optimization.qmd
+    - part: "BIVARIATE"
+      chapters:
+      # Chapter 3
+      - bivariate.qmd
+      # Chapter 4
+      - matrices.qmd
+    - part: "INTRODuCTiON TO OPERATIONAL RESEARCH"
+      chapters:
+      # Chapter 5
+      - operations-research.qmd
+    # References
     - references.qmd
 
 bibliography: references.bib

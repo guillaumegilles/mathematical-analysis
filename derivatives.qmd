@@ -1,36 +1,38 @@
 ---
 title: "Module 1 – Dérivée d’une fonction univariée et Élasticité"
-lang: fr
 ---
 
 # Introduction
 
-Ce module présente les notions fondamentales de dérivation des fonctions univariées et leur interprétation économique à travers la notion d’élasticité.
+Ce module présente les notions fondamentales de dérivation des
+fonctions univariées et leur interprétation économique à travers
+la notion d’élasticité.
 
 # Partie 1 – Dérivée d’une fonction univariée (cas simple)
 
 ## Définition
 
 Une fonction $f$ est dite dérivable en $x$ si le taux d’accroissement
-$$
-\frac{f(x+h)-f(x)}{h}
-$$
-admet une limite quand $h \to 0$.  
+$\frac{f(x+h)-f(x)}{h}$ admet une limite quand $h \to 0$.  
+
 On définit alors :
+
 $$
 f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
 $$
 
 ## Exemples
 
-### Exemple 1
-$f(x)=x^2$  
+### Exemple 1 : $f(x)=x^2$  
+
+Taux d'accroissement : 
+
 $$
-f'(x)=2x
+f'(x) = 2x
 $$
 
-### Exemple 2
-$f(x)=\frac{1}{x}$  
+### Exemple 2: $f(x)=\frac{1}{x}$  
+
 $$
 f'(x)=-\frac{1}{x^2}
 $$
