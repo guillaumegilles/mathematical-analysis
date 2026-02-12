@@ -15,19 +15,18 @@ book:
  
   chapters:
     - index.qmd
-    - part: "UNIVARIATE"
+    - part: "**UNIVARIATE**"
       chapters:
-      # Chapter 1
       - derivatives.qmd
-      # Chapter 2
-      - intro-math-optimization.qmd
-    - part: "BIVARIATE"
+      - elasticity-1.qmd
+      - intro-optimization.qmd
+    - part: "**BIVARIATE**"
       chapters:
       # Chapter 3
       - bivariate.qmd
       # Chapter 4
       - matrices.qmd
-    - part: "INTRODuCTiON TO OPERATIONAL RESEARCH"
+    - part: "**INTRODUCTION TO OPERATIONAL RESEARCH**"
       chapters:
       # Chapter 5
       - operations-research.qmd
