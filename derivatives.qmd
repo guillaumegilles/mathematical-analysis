@@ -1,14 +1,22 @@
----
-title: "Module 1 – Dérivée d’une fonction univariée et Élasticité"
----
+# Dérivée d’une fonction univariée et Élasticité
 
-# Introduction
+::: {.callout-important}
+
+## Objectifs
+
+- Comprendre la **dérivée d’une fonction univariée**
+- Savoir **calculer et interpréter** une dérivée
+- Étudier le **sens de variation** d’une fonction
+- Comprendre et calculer l’**élasticité**
+
+:::
+
+
+## Introduction
 
 Ce module présente les notions fondamentales de dérivation des
 fonctions univariées et leur interprétation économique à travers
 la notion d’élasticité.
-
-# Partie 1 – Dérivée d’une fonction univariée (cas simple)
 
 ## Définition
 
@@ -21,15 +29,36 @@ $$
 f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}
 $$
 
-## Exemples
+<--
+**Illustration!**
+-->
 
-### Exemple 1 : $f(x)=x^2$  
+### Exemples
 
-Taux d'accroissement : 
+Le taux d’accroissement de la fonction carrée $f(x) = x^2$ est :
 
 $$
-f'(x) = 2x
+\begin{aligned}
+  & = \frac{f(x + h) - f(x)}{h} \\
+  & = \frac{(x + h)^2 - x^2}{h} \\
+  & = \frac{(x^2 + 2xh + h^2) - x^2}{h} \\
+  & = \frac{(2xh + h^2)}{h} \\
+  & = 2x + h
+\end{aligned}
 $$
+
+Ce qui signifie :
+
+$$
+\begin{aligned}
+  f\prime(x) & = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \\
+             & = \lim_{h \to 0} (2x + h) \\
+             & = {\color{red} 2x}
+\end{aligned}
+$$
+
+Le taux d’accroissementde la fonction, $f(x) = x^2$ est **$2x$**.
+
 
 ### Exemple 2: $f(x)=\frac{1}{x}$  
 
@@ -43,12 +72,12 @@ $$
 f'(x)=\frac{1}{2\sqrt{x}}, \quad x>0
 $$
 
-## Dérivées usuelles
+## Dérivées des fonctions usuelles
 
 | Fonction $f(x)$ | Dérivée $f'(x)$ | Condition |
-|---|---|---|
-| $k$ | $0$ | $k \in \mathbb{R}$ |
-| $kx$ | $k$ | |
+|-----------------|-----------------|-----------|
+| $k$             | $0$             | $k \in \mathbb{R}$ |
+| $kx$            | $k$             | |
 | $x^n$ | $nx^{n-1}$ | $n\in\mathbb{N}$ |
 | $e^x$ | $e^x$ | |
 | $\ln(x)$ | $\frac{1}{x}$ | $x>0$ |
@@ -84,26 +113,6 @@ La dérivée $f'(a)$ représente la pente de la tangente à la courbe de $f$ au 
 
 Plusieurs études complètes de variations sont présentées avec graphiques.
 
-# Partie 4 – Élasticité
-
-## Définition
-
-L’élasticité de $f$ par rapport à $x$ est définie par :
-$$
-E(x) = f'(x) \times \frac{x}{f(x)}
-$$
-
-## Interprétation économique
-
-- $E(x)=0$ : parfaitement inélastique
-- $0<|E(x)|<1$ : inélastique
-- $|E(x)|=1$ : élasticité unitaire
-- $|E(x)|>1$ : élastique
-
-## Applications
-
-Étude de fonctions de demande et interprétation économique selon le niveau des prix.
-
 # Conclusion
 
 Ce module pose les bases essentielles de l’analyse mathématique appliquée à l’économie, en reliant rigueur mathématique et interprétation économique.
@@ -112,53 +121,6 @@ Ce module pose les bases essentielles de l’analyse mathématique appliquée à
 <<<<<<<<>>>>>>>>>>>>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-title: "Dérivée d’une fonction univariée & Elasticité"
----
-
-
-:::: {.panel-tabset}
-
-### English 
-
-::: {.callout-note}
-### Objectives
-
-- Understand derivatives
-
-:::
-
-### Français
-
-
-
-
-::::
-## Objectifs du module
-- Comprendre la **dérivée d’une fonction univariée**
-- Savoir **calculer et interpréter** une dérivée
-- Étudier le **sens de variation** d’une fonction
-- Comprendre et calculer l’**élasticité**
-
----
-
-# Partie 1 — Dérivée d’une fonction univariée  
-## Cas simple
 
 ## Définition de la dérivée
 Soit une fonction $f$ définie sur un intervalle $I$.  
@@ -256,42 +218,6 @@ $$
 $$
 f(x) = x^3 - 3x
 $$
-
----
-
-# Partie 4 — Élasticité
-
-## Définition de l’élasticité
-L’élasticité de $y$ par rapport à $x$ est définie par :
-
-$$
-\varepsilon = \frac{dy}{dx} \times \frac{x}{y}
-$$
-
----
-
-## Interprétation
-- $|\varepsilon| > 1$ : demande **élastique**
-- $|\varepsilon| < 1$ : demande **inélastique**
-- $|\varepsilon| = 1$ : élasticité unitaire
-
----
-
-## Exemple économique
-La demande $D(p)$ dépend du prix $p$.
-- $p = 20$ € : +1 % sur $p$ ⇒ −0,25 % sur $D$
-- $p = 80$ € : +1 % sur $p$ ⇒ −4 % sur $D$
-
----
-
-## ✏️ Exercice — Élasticité
-Soit :
-$$
-D(p) = 100 p^{-2}
-$$
-
-1. Calculer $D'(p)$  
-2. Calculer l’élasticité de la demande par rapport au prix  
 
 ---
 
