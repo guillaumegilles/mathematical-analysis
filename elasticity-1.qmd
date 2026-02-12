@@ -1,0 +1,59 @@
+# Elasticity
+
+
+## Définition
+
+L’élasticité de $f$ par rapport à $x$ est définie par :
+$$
+E(x) = f'(x) \times \frac{x}{f(x)}
+$$
+
+## Interprétation économique
+
+- $E(x)=0$ : parfaitement inélastique
+- $0<|E(x)|<1$ : inélastique
+- $|E(x)|=1$ : élasticité unitaire
+- $|E(x)|>1$ : élastique
+
+## Applications
+
+Étude de fonctions de demande et interprétation économique selon le niveau des prix.
+
+## Définition de l’élasticité
+
+L’élasticité de $y$ par rapport à $x$ est définie par :
+
+$$
+\varepsilon = \frac{dy}{dx} \times \frac{x}{y}
+$$
+
+---
+
+## Interprétation
+- $|\varepsilon| > 1$ : demande **élastique**
+- $|\varepsilon| < 1$ : demande **inélastique**
+- $|\varepsilon| = 1$ : élasticité unitaire
+
+---
+
+## Exemple économique
+La demande $D(p)$ dépend du prix $p$.
+- $p = 20$ € : +1 % sur $p$ ⇒ −0,25 % sur $D$
+- $p = 80$ € : +1 % sur $p$ ⇒ −4 % sur $D$
+
+---
+
+## ✏️ Exercice — Élasticité
+Soit :
+$$
+D(p) = 100 p^{-2}
+$$
+
+1. Calculer $D'(p)$  
+2. Calculer l’élasticité de la demande par rapport au prix  
+
+---
+
+
+
+https://www.investopedia.com/terms/e/elastic.asp
