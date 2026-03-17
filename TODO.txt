@@ -1,0 +1,23 @@
+## Structure du cours
+
+Part 1 = univariate
+Part 2 = bivariate
+Part 3 = operational research
+
+1.  cours | a = 0
+          | x^n = nx^n-1
+    ---------------------
+    exercice | a = 0
+             | x^n = nx^n-1
+             | level 1
+             | level 2
+             | level 3
+2.  cours | ln(x) = 0
+          | 
+    ---------------------
+    exercice | level 1
+             | level 2
+             | level 3
+3. etc.
+
+## Exercices w/ Shinylive + QCM
